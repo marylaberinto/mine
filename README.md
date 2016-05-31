@@ -9,7 +9,7 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up? ###
 
 * Clone the repository
-* Open the code in visual studio 2012+
+* Open the code in Visual Studio 2012+
 * Build the code, during the build all build dependencies should be downloaded
 * Browser dependencies: By default we use Firefox for functional testing. All you need is firefox installed on your machine.
 
