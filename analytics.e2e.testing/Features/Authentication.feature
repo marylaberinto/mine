@@ -9,3 +9,8 @@ Scenario: Access Discovery UI
 	When I navigate to the portal
 	Then I should be able to see the analytics page 
 	And I should be able to see the search bar
+
+Scenario: No access to Discovery UI
+	Given I log into CRM with no approved permission
+	When I navigate to the portal
+	Then I should not be able to see the analytics page 

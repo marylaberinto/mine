@@ -29,5 +29,17 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         {
             ScenarioContext.Current.Pending();
         }
+        [Given(@"I log into CRM with no approved permission")]
+        public void GivenILogIntoCRMWithNoApprovedPermission()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should not be able to see the analytics page")]
+        public void ThenIShouldNotBeAbleToSeeTheAnalyticsPage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }
