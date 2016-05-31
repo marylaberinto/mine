@@ -46,12 +46,12 @@
       <HintPath>..\packages\Findly.FunctionalAutomation.1.2.57.0\lib\net45\Findly.FunctionalAutomation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Findly.OrganizationProfile.Client, Version=1.6.24.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\findly.OrganizationProfile.Client.1.6.24.0\lib\net45\Findly.OrganizationProfile.Client.dll</HintPath>
+    <Reference Include="Findly.OrganizationProfile.Client, Version=1.7.50.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\findly.OrganizationProfile.Client.1.7.50.0\lib\net45\Findly.OrganizationProfile.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Findly.OrganizationProfile.Contract, Version=1.6.24.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\findly.OrganizationProfile.Client.1.6.24.0\lib\net45\Findly.OrganizationProfile.Contract.dll</HintPath>
+    <Reference Include="Findly.OrganizationProfile.Contract, Version=1.7.50.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\findly.OrganizationProfile.Client.1.7.50.0\lib\net45\Findly.OrganizationProfile.Contract.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Gherkin, Version=1.2.57.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
