@@ -34,5 +34,17 @@ namespace findly.TestAutomation.Analytics.Helpers
             get { return (string)FeatureContext.Current["LoggedInUser"]; }
             set { FeatureContext.Current.Set(value, "LoggedInUser"); }
         }
+
+        public static void ClearSignedInUser ()
+        {
+            IsLoggedIn = false;
+            LoggedInUser = null;
+            if (ScenarioContext.Current != null)
+            {
+                ScenarioContextWrapper.SignUpEmail = null;
+            }
+
+            new CookieHelper().DeleteAllCookies();
+        }
     }
 }
