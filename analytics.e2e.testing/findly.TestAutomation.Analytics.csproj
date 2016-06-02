@@ -42,8 +42,8 @@
       <HintPath>..\packages\Faker.Net.1.0.3\lib\net40\Faker.NET4.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Findly.FunctionalAutomation, Version=1.2.57.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Findly.FunctionalAutomation.1.2.57.0\lib\net45\Findly.FunctionalAutomation.dll</HintPath>
+    <Reference Include="Findly.FunctionalAutomation, Version=1.2.58.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Findly.FunctionalAutomation.1.2.58.0\lib\net45\Findly.FunctionalAutomation.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Findly.OrganizationProfile.Client, Version=1.7.50.0, Culture=neutral, processorArchitecture=MSIL">
@@ -54,12 +54,12 @@
       <HintPath>..\packages\findly.OrganizationProfile.Client.1.7.50.0\lib\net45\Findly.OrganizationProfile.Contract.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Gherkin, Version=1.2.57.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
-      <HintPath>..\packages\Findly.FunctionalAutomation.1.2.57.0\lib\net45\Gherkin.dll</HintPath>
+    <Reference Include="Gherkin, Version=1.2.58.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
+      <HintPath>..\packages\Findly.FunctionalAutomation.1.2.58.0\lib\net45\Gherkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Gurock.TestRail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Findly.FunctionalAutomation.1.2.57.0\lib\net45\Gurock.TestRail.dll</HintPath>
+      <HintPath>..\packages\Findly.FunctionalAutomation.1.2.58.0\lib\net45\Gurock.TestRail.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MongoDB.Bson, Version=2.1.1.5, Culture=neutral, processorArchitecture=MSIL">
@@ -112,8 +112,8 @@
       <HintPath>..\packages\SpecRun.SpecFlow.1.2.0\lib\net35\TechTalk.SpecRun.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebDriver, Version=2.39.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.WebDriver.2.39.0\lib\net40\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=2.53.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.2.53.0\lib\net40\WebDriver.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WebDriver.Support, Version=2.39.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -122,9 +122,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiscoveryUI\Demographics.cs" />
-    <Compile Include="DiscoveryUI\DiscoveryPortal.cs" />
-    <Compile Include="DiscoveryUI\FindlyCRM.cs" />
+    <Compile Include="PageObjects\Demographics.cs" />
+    <Compile Include="PageObjects\Websites.cs" />
+    <Compile Include="PageObjects\FindlyCRM.cs" />
     <Compile Include="Features\Authentication.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -160,6 +160,12 @@
     <None Include="SpecRunTestProfile.xsd">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\Chromium.ChromeDriver.2.21\content\chromedriver.exe">
+      <Link>chromedriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

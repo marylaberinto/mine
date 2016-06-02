@@ -4,10 +4,11 @@ using System.IO;
 
 using findly.FunctionalAutomation;
 using findly.TestAutomation.Analytics.Helpers;
-using findly.TestAutomation.Analytics.DiscoveryUI;
+using findly.TestAutomation.Analytics.PageObjects;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using BoDi;
+using Coypu;
 using Findly.FunctionalAutomation.FeatureToggle;
 
 namespace findly.TestAutomation.Analytics.StepDefinitions
@@ -49,7 +50,8 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
                 FeatureContextWrapper.ClearSignedInUser();
             }
 
-            DiscoveryPortal.Demographics = new Demographics();
+            Websites.Demographics = new Demographics();
+            Websites.FindlyCRM = new FindlyCRM();
         }
 
         [AfterScenario]

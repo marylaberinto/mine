@@ -1,5 +1,7 @@
 ﻿using System;
-using findly.TestAutomation.Analytics.DiscoveryUI;
+using Coypu;
+using findly.TestAutomation.Analytics.Helpers;
+using findly.TestAutomation.Analytics.PageObjects;
 using TechTalk.SpecFlow;
 
 namespace findly.TestAutomation.Analytics.StepDefinitions
@@ -7,33 +9,34 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
     [Binding]
     public class AuthenticationSteps
     {
-        [Given(@"I log into CRM with approved permission")]
-        public void GivenILogIntoCRMWithApprovedPermission()
+        [Given(@"I log into CRM")]
+        public void GivenILogIntoCrm()
         {
-            ScenarioContext.Current.Pending();
+            Websites.FindlyCRM.LogIn(TestSettings.WaggleUserName, TestSettings.WagglePassword);
         }
         
-        [When(@"I navigate to the portal")]
-        public void WhenINavigateToThePortal()
+        [When(@"I navigate to the analytics portal")]
+        public void WhenINavigateToTheAnalyticsPortal()
         {
-            ScenarioContext.Current.Pending();
+            Websites.FindlyCRM.NavigateToAnalytics();
         }
         
         [Then(@"I should be able to see the analytics page")]
         public void ThenIShouldBeAbleToSeeTheAnalyticsPage()
         {
-            ScenarioContext.Current.Pending();
+            Websites.FindlyCRM.AssertIsAnalyticsPage();
         }
         
-        [Then(@"I should be able to see the search bar")]
-        public void ThenIShouldBeAbleToSeeTheSearchBar()
+        [Then(@"I should be able to view Discovery UI")]
+        public void ThenIShouldBeAbleToViewDiscoveryUi()
         {
-            ScenarioContext.Current.Pending();
+            Websites.Demographics.AssertDiscoveryuiLoaded();
         }
-        [Given(@"I log into CRM with no approved permission")]
-        public void GivenILogIntoCRMWithNoApprovedPermission()
+
+        [Then(@"I should not be able to navigate to the analytics portal")]
+        public void ThenIShouldNotBeAbleToNavigateToTheAnalyticsPortal ()
         {
-            ScenarioContext.Current.Pending();
+            Websites.FindlyCRM.AssertNoAccessToAnalytics();
         }
 
         [Then(@"I should not be able to see the analytics page")]
