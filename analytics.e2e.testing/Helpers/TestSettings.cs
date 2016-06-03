@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing.Imaging;
 using Findly.FunctionalAutomation.Settings;
 
 namespace findly.TestAutomation.Analytics.Helpers
@@ -11,6 +6,13 @@ namespace findly.TestAutomation.Analytics.Helpers
     public static class TestSettings
     {
         private static ISettingsProvider Settings { get; set; }
+
+        static TestSettings ()
+        {
+            // Half-way house - once DI is set up, we should inject the entire TestSettings object
+            Settings = new AppSettingsProvider();
+        }
+
         public static string WaggleUserName
         {
             get { return Settings["Waggle.User.Name"]; }
