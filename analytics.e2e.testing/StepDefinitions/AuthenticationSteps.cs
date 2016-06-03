@@ -1,6 +1,4 @@
-﻿using System;
-using Coypu;
-using findly.TestAutomation.Analytics.Helpers;
+﻿using findly.TestAutomation.Analytics.Helpers;
 using findly.TestAutomation.Analytics.PageObjects;
 using TechTalk.SpecFlow;
 

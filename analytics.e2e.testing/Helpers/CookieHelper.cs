@@ -1,6 +1,5 @@
-﻿using System;
-using Coypu;
-using TechTalk.SpecFlow;
+﻿using Coypu;
+using OpenQA.Selenium.Remote;
 
 namespace findly.TestAutomation.Analytics.Helpers
 {
@@ -11,7 +10,7 @@ namespace findly.TestAutomation.Analytics.Helpers
             try
             {
                 BrowserSession _browser = FeatureContextWrapper.BrowserSession;
-                var selenium = ((OpenQA.Selenium.Remote.RemoteWebDriver)_browser.Native);
+                var selenium = ((RemoteWebDriver)_browser.Native);
                 return selenium.Manage().Cookies.GetCookieNamed(name).Value;
             } catch
             {
@@ -25,7 +24,7 @@ namespace findly.TestAutomation.Analytics.Helpers
             try
             {
                 BrowserSession _browser = FeatureContextWrapper.BrowserSession;
-                var selenium = ((OpenQA.Selenium.Remote.RemoteWebDriver)_browser.Native);
+                var selenium = ((RemoteWebDriver)_browser.Native);
                 selenium.Manage().Cookies.DeleteAllCookies();
             } catch { }
         }

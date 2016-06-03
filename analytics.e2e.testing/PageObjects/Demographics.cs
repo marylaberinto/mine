@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Coypu;
+﻿using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
 using NUnit.Framework;
 
