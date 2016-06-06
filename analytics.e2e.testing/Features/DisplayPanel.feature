@@ -3,13 +3,12 @@
 	As a CRM user
 	I want to be able to see all the panels
 
-@mytag
 Scenario Outline: Display Panel
 	Given AnalyticsPortalAccess is Feature Toggled On
 	And I log into CRM 
-	When I navigate to the portal
+	When I navigate to the analytics portal
 	Then I should be able to see the analytics page 
-	And I should be able to see the <panels>
+	And I should be able to see the panel <panels>
 
 	Examples: Display Panels
 	| panels           |

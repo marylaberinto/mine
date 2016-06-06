@@ -19,13 +19,13 @@ namespace findly.TestAutomation.Analytics.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Display Panel", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
-        "e panels", SourceFile="Features\\Display Panel.feature", SourceLine=0)]
+        "e panels", SourceFile="Features\\DisplayPanel.feature", SourceLine=0)]
     public partial class DisplayPanelFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Display Panel.feature"
+#line 1 "DisplayPanel.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
@@ -66,52 +66,42 @@ namespace findly.TestAutomation.Analytics.Features
         
         public virtual void DisplayPanel(string panels, string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "mytag"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Panel", @__tags);
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Panel", exampleTags);
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 7
  testRunner.Given("AnalyticsPortalAccess is Feature Toggled On", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
+#line 8
  testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+ testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.When("I navigate to the portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
  testRunner.Then("I should be able to see the analytics page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 12
- testRunner.And(string.Format("I should be able to see the {0}", panels), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+ testRunner.And(string.Format("I should be able to see the panel {0}", panels), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Display Panel, Display Panels, Types", new string[] {
-                "mytag"}, SourceLine=15)]
+        [TechTalk.SpecRun.ScenarioAttribute("Display Panel, Display Panels, Types", SourceLine=14)]
         public virtual void DisplayPanel_DisplayPanels_Types()
         {
             this.DisplayPanel("Types", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Display Panel, Display Panels, Systems", new string[] {
-                "mytag"}, SourceLine=16)]
+        [TechTalk.SpecRun.ScenarioAttribute("Display Panel, Display Panels, Systems", SourceLine=15)]
         public virtual void DisplayPanel_DisplayPanels_Systems()
         {
             this.DisplayPanel("Systems", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Display Panel, Display Panels, Campaigns", new string[] {
-                "mytag"}, SourceLine=17)]
+        [TechTalk.SpecRun.ScenarioAttribute("Display Panel, Display Panels, Campaigns", SourceLine=16)]
         public virtual void DisplayPanel_DisplayPanels_Campaigns()
         {
             this.DisplayPanel("Campaigns", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Display Panel, Display Panels, Profile Statuses", new string[] {
-                "mytag"}, SourceLine=18)]
+        [TechTalk.SpecRun.ScenarioAttribute("Display Panel, Display Panels, Profile Statuses", SourceLine=17)]
         public virtual void DisplayPanel_DisplayPanels_ProfileStatuses()
         {
             this.DisplayPanel("Profile Statuses", ((string[])(null)));
@@ -133,7 +123,7 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Display Panel.feature"
+#line 1 "DisplayPanel.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
@@ -175,32 +165,25 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Display Panel")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
         [NUnit.Framework.TestCaseAttribute("Types", null)]
         [NUnit.Framework.TestCaseAttribute("Systems", null)]
         [NUnit.Framework.TestCaseAttribute("Campaigns", null)]
         [NUnit.Framework.TestCaseAttribute("Profile Statuses", null)]
         public virtual void DisplayPanel(string panels, string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "mytag"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Panel", @__tags);
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Panel", exampleTags);
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 7
  testRunner.Given("AnalyticsPortalAccess is Feature Toggled On", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
+#line 8
  testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+ testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.When("I navigate to the portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
  testRunner.Then("I should be able to see the analytics page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 12
- testRunner.And(string.Format("I should be able to see the {0}", panels), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+ testRunner.And(string.Format("I should be able to see the panel {0}", panels), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
