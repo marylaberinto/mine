@@ -17,16 +17,16 @@ namespace findly.TestAutomation.Analytics.Helpers
             set { FeatureContext.Current.Set(value, "IsLoggedIn"); }
         }
 
-        public static string TestUserName
+        public static string WaggleUserName
         {
-            get { return (string)FeatureContext.Current["TestUserName"]; }
-            set { FeatureContext.Current.Set(value, "TestUserName"); }
+            get { return (string)FeatureContext.Current["WaggleUserName"]; }
+            set { FeatureContext.Current.Set(value, "WaggleUserName"); }
         }
 
-        public static string TestUserPassword
+        public static string WagglePassword
         {
-            get { return (string)FeatureContext.Current["TestUserPassword"]; }
-            set { FeatureContext.Current.Set(value, "TestUserPassword"); }
+            get { return (string)FeatureContext.Current["WagglePassword"]; }
+            set { FeatureContext.Current.Set(value, "WagglePassword"); }
         }
 
         public static string LoggedInUser

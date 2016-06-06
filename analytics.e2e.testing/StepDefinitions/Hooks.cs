@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Configuration;
 using System.IO;
-
+using BoDi;
 using findly.FunctionalAutomation;
 using findly.TestAutomation.Analytics.Helpers;
-using findly.TestAutomation.Analytics.DiscoveryUI;
+using findly.TestAutomation.Analytics.PageObjects;
+using Findly.FunctionalAutomation.FeatureToggle;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
-using BoDi;
-using Findly.FunctionalAutomation.FeatureToggle;
 
 namespace findly.TestAutomation.Analytics.StepDefinitions
 {
@@ -49,7 +48,8 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
                 FeatureContextWrapper.ClearSignedInUser();
             }
 
-            DiscoveryPortal.Demographics = new Demographics();
+            Websites.Demographics = new Demographics();
+            Websites.FindlyCRM = new FindlyCRM();
         }
 
         [AfterScenario]
