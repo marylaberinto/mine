@@ -130,12 +130,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Authentication.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Display Panel.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Display Panel.feature</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\CookieHelper.cs" />
     <Compile Include="Helpers\FeatureContextWrapper.cs" />
     <Compile Include="Helpers\ScenarioContextWrapper.cs" />
     <Compile Include="Helpers\TestSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\AuthenticationSteps.cs" />
+    <Compile Include="StepDefinitions\DisplayPanelSteps.cs" />
     <Compile Include="StepDefinitions\FeatureToggleSteps.cs" />
     <Compile Include="StepDefinitions\Hooks.cs" />
   </ItemGroup>
@@ -154,6 +160,10 @@
     <None Include="Features\Authentication.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Authentication.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Display Panel.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Display Panel.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
