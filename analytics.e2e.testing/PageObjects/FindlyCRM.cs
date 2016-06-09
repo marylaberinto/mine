@@ -1,5 +1,4 @@
-﻿using System;
-using Coypu;
+﻿using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
 using NUnit.Framework;
 
@@ -32,7 +31,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void SignOut()
         {
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]", new Options { Timeout = TimeSpan.FromSeconds(15.0) }).Exists();
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(15)).Exists();
             _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click();
             _browser.FindCss("[data-id='logout']").Exists();
             _browser.FindCss("[data-id='logout']").Click();
@@ -57,7 +56,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void NavigateToAnalytics()
         {
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]", new Options { Timeout = TimeSpan.FromSeconds(15.0) }).Exists();
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(15)).Exists();
             _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click();
             _browser.FindCss("[data-id='analytics']").Exists();
             _browser.FindCss("[data-id='analytics']").Click();
@@ -65,12 +64,12 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void AssertIsAnalyticsPage()
         {
-            Assert.True(_browser.FindWindow("Findly Analytics").Exists(), "The user did not re-direct to Analytics page");
+            Assert.True(_browser.FindWindow("Findly Analytics", CoypuOptions.Timeout(15)).Exists(), "The user did not re-direct to Analytics page");
         }
 
         public void AssertNoAccessToAnalytics()
         {
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]", new Options { Timeout = TimeSpan.FromSeconds(15.0) }).Exists();
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(15)).Exists();
             _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click();
             Assert.False(_browser.FindCss("[data-id='analytics']").Exists(), "Link to analytics is available to the user");
         }

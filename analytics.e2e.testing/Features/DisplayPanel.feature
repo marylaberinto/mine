@@ -3,16 +3,12 @@
 	As a CRM user
 	I want to be able to see all the panels
 
-Scenario Outline: Display Panel
+Scenario Outline: Display Panels
 	Given AnalyticsPortalAccess is Feature Toggled On
 	And I log into CRM 
-	When I navigate to the analytics portal
-	Then I should be able to see the analytics page 
-	And I should be able to see the panel <panels>
+	When I navigate to the analytics portal 
+	Then I should be able to see the panels <panels>
 
 	Examples: Display Panels
-	| panels           |
-	| Types            |
-	| Systems          |
-	| Campaigns        |
-	| Profile Statuses |
+	| panels                                      |
+	| Types, Systems, Campaigns, Profile Statuses |
