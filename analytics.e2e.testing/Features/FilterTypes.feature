@@ -4,7 +4,7 @@
 	I want to be able to see all the filters I can use
 
 @mytag
-Scenario: Display all filters
+Scenario Outline: Display all filters
 	Given AnalyticsPortalAccess is Feature Toggled On
 	And I log into CRM
 	When I navigate to the analytics portal
