@@ -1,4 +1,5 @@
-﻿Feature: Filter Types
+﻿@PersistExistingFeatureToggle
+Feature: Filter Types
 	In order to view the demographics
 	As a CRM user
 	I want to be able to see all the filters I can use
