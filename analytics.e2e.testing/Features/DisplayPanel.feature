@@ -1,4 +1,5 @@
-﻿Feature: Display Panel
+﻿@PersistExistingFeatureToggle
+Feature: Display Panel
 	In order to view the demographics
 	As a CRM user
 	I want to be able to see all the panels

@@ -19,5 +19,12 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
             var shouldShow = onOrOff == "On";
             _featureToggleService.SetFeatureToggle(toggleKey, shouldShow);
         }
+
+        [Given(@"(.*) for Org (.*) has Feature Toggle Exception set as (.*)")]
+        public void GivenServiceForOrgIsFeatureToggled(string toggleKey, string orgName, string onOrOff)
+        {
+            var shouldShow = onOrOff == "On";
+            _featureToggleService.SetFeatureToggleException(toggleKey, orgName, shouldShow);
+        }
     }
 }
