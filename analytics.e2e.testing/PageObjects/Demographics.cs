@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
 using NUnit.Framework;
@@ -24,39 +25,26 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void AssertHasPanelLoaded(List<string> panelNameList)
         {
-            if (_analyticsiFrame.Exists(CoypuOptions.Timeout(60)))
-            {
-                var panelTitles = new List<string>();
-                var panelElements = _analyticsiFrame.FindAllCss(".card__header-title", null, CoypuOptions.Timeout(60));
-                foreach (var panelElement in panelElements)
-                {
-                    panelTitles.Add(panelElement.Text);
-                }
-                CollectionAssert.AreEquivalent(panelNameList, panelTitles,
-                    "Atleast one of the panel titles has not loaded correctly");
-            }
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var panelElements = _analyticsiFrame.FindAllCss(".card__header-title", null, CoypuOptions.Timeout(60));
+            var panelTitles = panelElements.Select(panelElement => panelElement.Text).ToList();
+            CollectionAssert.AreEquivalent(panelNameList, panelTitles,
+                "Atleast one of the panel titles has not loaded correctly");
         }
 
         public void EnterCriteriaInSearchField(string value)
         {
-            if (_analyticsiFrame.Exists(CoypuOptions.Timeout(60)))
-            {
-                _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).FillInWith(value);
-            }
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).FillInWith(value);
         }
 
         public void AssertAllFiltersExist(List<string> filterList)
         {
-            if (_analyticsiFrame.Exists(CoypuOptions.Timeout(60)))
-            {
-                var actualFilters = new List<string>();
-                var filterElements = _analyticsiFrame.FindAllCss(".square", null, CoypuOptions.Timeout(60));
-                foreach (var filterElement in filterElements)
-                {
-                    actualFilters.Add(filterElement.Text);
-                }
-                CollectionAssert.AreEquivalent(filterList, actualFilters, "Atleast one fo the filters has not loaded correctly");
-            }
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var filterElements = _analyticsiFrame.FindAllCss(".square", null, CoypuOptions.Timeout(60));
+            var actualFilters = filterElements.Select(filterElement => filterElement.Text).ToList();
+            CollectionAssert.AreEquivalent(filterList, actualFilters,
+                "Atleast one fo the filters has not loaded correctly");
         }
     }
 }
