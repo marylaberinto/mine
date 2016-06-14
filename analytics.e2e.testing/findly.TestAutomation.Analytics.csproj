@@ -122,7 +122,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\CoypuOptions.cs" />
+    <Compile Include="Features\FilterTypes.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FilterTypes.feature</DependentUpon>
+    </Compile>
+	<Compile Include="Helpers\CoypuOptions.cs" />
     <Compile Include="PageObjects\Demographics.cs" />
     <Compile Include="PageObjects\Websites.cs" />
     <Compile Include="PageObjects\FindlyCRM.cs" />
@@ -166,6 +171,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DisplayPanel.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\FilterTypes.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FilterTypes.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
@@ -177,6 +186,9 @@
       <Link>chromedriver.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
