@@ -150,6 +150,7 @@
     <Compile Include="StepDefinitions\DisplayPanelSteps.cs" />
     <Compile Include="StepDefinitions\FeatureToggleFeatureHooks.cs" />
     <Compile Include="StepDefinitions\FeatureToggleSteps.cs" />
+    <Compile Include="StepDefinitions\FilterTypesSteps.cs" />
     <Compile Include="StepDefinitions\Hooks.cs" />
   </ItemGroup>
   <ItemGroup>
