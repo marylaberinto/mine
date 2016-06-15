@@ -9,15 +9,9 @@ Scenario Outline: Display all filters
 	Given AnalyticsPortalAccess is Feature Toggled On
 	And I log into CRM
 	When I navigate to the analytics portal
-	And I click on the search field
-	And I type ':'
+	And I type : on the search field
 	Then I should be able to see all filters <filters>
 
 	Examples: FilterTypes
-	| filters  |
-	| Keyword  |
-	| Types    |
-	| Status   |
-	| System   |
-	| Campaign |
-	| Category |
+	| filters                                           |
+	| Keyword, Type, Status, System, Campaign, Category |

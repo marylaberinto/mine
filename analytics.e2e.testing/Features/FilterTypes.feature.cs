@@ -10,12 +10,12 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
-
-using TechTalk.SpecFlow;
-
 #pragma warning disable
 namespace findly.TestAutomation.Analytics.Features
 {
+    using TechTalk.SpecFlow;
+    
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Filter Types", new string[] {
@@ -78,49 +78,18 @@ this.ScenarioSetup(scenarioInfo);
 #line 11
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.And("I click on the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I type : on the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
- testRunner.And("I type \':\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
  testRunner.Then(string.Format("I should be able to see all filters {0}", filters), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Keyword", SourceLine=17)]
-        public virtual void DisplayAllFilters_FilterTypes_Keyword()
+        [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Keyword, Type, Status, System, Campaign, Catego" +
+            "ry", SourceLine=16)]
+        public virtual void DisplayAllFilters_FilterTypes_KeywordTypeStatusSystemCampaignCategory()
         {
-            this.DisplayAllFilters("Keyword", ((string[])(null)));
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Types", SourceLine=18)]
-        public virtual void DisplayAllFilters_FilterTypes_Types()
-        {
-            this.DisplayAllFilters("Types", ((string[])(null)));
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Status", SourceLine=19)]
-        public virtual void DisplayAllFilters_FilterTypes_Status()
-        {
-            this.DisplayAllFilters("Status", ((string[])(null)));
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, System", SourceLine=20)]
-        public virtual void DisplayAllFilters_FilterTypes_System()
-        {
-            this.DisplayAllFilters("System", ((string[])(null)));
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Campaign", SourceLine=21)]
-        public virtual void DisplayAllFilters_FilterTypes_Campaign()
-        {
-            this.DisplayAllFilters("Campaign", ((string[])(null)));
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Category", SourceLine=22)]
-        public virtual void DisplayAllFilters_FilterTypes_Category()
-        {
-            this.DisplayAllFilters("Category", ((string[])(null)));
+            this.DisplayAllFilters("Keyword, Type, Status, System, Campaign, Category", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
@@ -183,12 +152,7 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Display all filters")]
-        [NUnit.Framework.TestCaseAttribute("Keyword", null)]
-        [NUnit.Framework.TestCaseAttribute("Types", null)]
-        [NUnit.Framework.TestCaseAttribute("Status", null)]
-        [NUnit.Framework.TestCaseAttribute("System", null)]
-        [NUnit.Framework.TestCaseAttribute("Campaign", null)]
-        [NUnit.Framework.TestCaseAttribute("Category", null)]
+        [NUnit.Framework.TestCaseAttribute("Keyword, Type, Status, System, Campaign, Category", null)]
         public virtual void DisplayAllFilters(string filters, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display all filters", exampleTags);
@@ -201,10 +165,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 11
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.And("I click on the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I type : on the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
- testRunner.And("I type \':\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
  testRunner.Then(string.Format("I should be able to see all filters {0}", filters), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
