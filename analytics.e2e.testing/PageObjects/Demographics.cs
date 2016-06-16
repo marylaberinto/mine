@@ -20,7 +20,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void AssertDiscoveryuiLoaded()
         {
-            Assert.True(_browser.FindId("search").Exists(), "Discovery UI Search bar failed to load");
+            Assert.True(_analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).Exists(), "Discovery UI Search bar failed to load");
         }
 
         public void AssertHasPanelLoaded(List<string> panelNameList)
@@ -44,7 +44,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
             var filterElements = _analyticsiFrame.FindAllCss(".square", null, CoypuOptions.Timeout(60));
             var actualFilters = filterElements.Select(filterElement => filterElement.Text).ToList();
             CollectionAssert.AreEquivalent(filterList, actualFilters,
-                "Atleast one fo the filters has not loaded correctly");
+                "Atleast one of the filters has not loaded correctly");
         }
     }
 }

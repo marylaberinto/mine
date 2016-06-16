@@ -18,9 +18,8 @@ namespace findly.TestAutomation.Analytics.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Filter Types", new string[] {
-            "PersistExistingFeatureToggle"}, Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
-        "e filters I can use", SourceFile="Features\\FilterTypes.feature", SourceLine=1)]
+    [TechTalk.SpecRun.FeatureAttribute("Filter Types", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
+        "e filters I can use", SourceFile="Features\\FilterTypes.feature", SourceLine=0)]
     public partial class FilterTypesFeature
     {
         
@@ -34,8 +33,7 @@ namespace findly.TestAutomation.Analytics.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Filter Types", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
-                    "e filters I can use", ProgrammingLanguage.CSharp, new string[] {
-                        "PersistExistingFeatureToggle"});
+                    "e filters I can use", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -69,24 +67,22 @@ namespace findly.TestAutomation.Analytics.Features
         public virtual void DisplayAllFilters(string filters, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display all filters", exampleTags);
-#line 8
+#line 7
 this.ScenarioSetup(scenarioInfo);
+#line 8
+ testRunner.Given("I log into CRM as an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.Given("AnalyticsPortalAccess is Feature Toggled On", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
- testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
+#line 10
  testRunner.And("I type : on the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+#line 11
  testRunner.Then(string.Format("I should be able to see all filters {0}", filters), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Keyword, Type, Status, System, Campaign, Catego" +
-            "ry", SourceLine=16)]
+            "ry", SourceLine=14)]
         public virtual void DisplayAllFilters_FilterTypes_KeywordTypeStatusSystemCampaignCategory()
         {
             this.DisplayAllFilters("Keyword, Type, Status, System, Campaign, Category", ((string[])(null)));
@@ -103,7 +99,6 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Filter Types")]
-    [NUnit.Framework.CategoryAttribute("PersistExistingFeatureToggle")]
     public partial class FilterTypesFeature_NUnit
     {
         
@@ -117,8 +112,7 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Filter Types", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
-                    "e filters I can use", ProgrammingLanguage.CSharp, new string[] {
-                        "PersistExistingFeatureToggle"});
+                    "e filters I can use", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -156,17 +150,15 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         public virtual void DisplayAllFilters(string filters, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display all filters", exampleTags);
-#line 8
+#line 7
 this.ScenarioSetup(scenarioInfo);
+#line 8
+ testRunner.Given("I log into CRM as an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.Given("AnalyticsPortalAccess is Feature Toggled On", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
- testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
+#line 10
  testRunner.And("I type : on the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+#line 11
  testRunner.Then(string.Format("I should be able to see all filters {0}", filters), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

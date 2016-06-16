@@ -1,15 +1,13 @@
-﻿@PersistExistingFeatureToggle
-Feature: Display Panel
+﻿Feature: Display Panel
 	In order to view the demographics
 	As a CRM user
 	I want to be able to see all the panels
 
 Scenario Outline: Display Panels
-	Given AnalyticsPortalAccess is Feature Toggled On
-	And I log into CRM 
+	Given I log into CRM as an authenticated user
 	When I navigate to the analytics portal 
 	Then I should be able to see the panels <panels>
 
 	Examples: Display Panels
 	| panels                                      |
-	| Types, Systems, Campaigns, Profile Statuses |
+	| Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date |
