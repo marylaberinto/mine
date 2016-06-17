@@ -6,13 +6,13 @@ using NUnit.Framework;
 
 namespace findly.TestAutomation.Analytics.PageObjects
 {
-    public class Demographics
+    public class AnalyticsPage
     {
         private readonly BrowserSession _browser = FeatureContextWrapper.BrowserSession;
         private readonly ElementScope _analyticsiFrame;
 
         //Analytics Constructor
-        public Demographics()
+        public AnalyticsPage()
         {
             //In absence of any other attribute, using empty string for finding the frame on the page.
             _analyticsiFrame = _browser.FindWindow("Findly Analytics").FindFrame("");

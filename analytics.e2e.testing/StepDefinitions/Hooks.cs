@@ -48,7 +48,7 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
                 FeatureContextWrapper.ClearSignedInUser();
             }
 
-            Websites.Demographics = new Demographics();
+            Websites.AnalyticsPage = new AnalyticsPage();
             Websites.FindlyCRM = new FindlyCRM();
         }
 

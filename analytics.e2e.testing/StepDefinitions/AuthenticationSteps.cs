@@ -28,7 +28,7 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         [Then(@"I should be able to view Discovery UI")]
         public void ThenIShouldBeAbleToViewDiscoveryUi()
         {
-            Websites.Demographics.AssertDiscoveryuiLoaded();
+            Websites.AnalyticsPage.AssertDiscoveryuiLoaded();
         }
 
         [Then(@"I should not be able to navigate to the analytics portal")]

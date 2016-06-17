@@ -128,7 +128,7 @@
       <DependentUpon>FilterTypes.feature</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CoypuOptions.cs" />
-    <Compile Include="PageObjects\Demographics.cs" />
+    <Compile Include="PageObjects\AnalyticsPage.cs" />
     <Compile Include="PageObjects\Websites.cs" />
     <Compile Include="PageObjects\FindlyCRM.cs" />
     <Compile Include="Features\Authentication.feature.cs">

@@ -13,14 +13,14 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         [When(@"I type (.*) on the search field")]
         public void WhenITypeOnTheSearchField(string value)
         {
-            Websites.Demographics.EnterCriteriaInSearchField(value);
+            Websites.AnalyticsPage.EnterCriteriaInSearchField(value);
         }
 
         [Then(@"I should be able to see all filters (.*)")]
         public void ThenIShouldBeAbleToSeeAllFilters(string filters)
         {
             var filterList = filters.Replace(", ", ",").Split(',').ToList();
-            Websites.Demographics.AssertAllFiltersExist(filterList);
+            Websites.AnalyticsPage.AssertAllFiltersExist(filterList);
         }
     }
 }

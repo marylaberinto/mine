@@ -82,10 +82,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Keyword, Type, Status, System, Campaign, Catego" +
-            "ry", SourceLine=14)]
-        public virtual void DisplayAllFilters_FilterTypes_KeywordTypeStatusSystemCampaignCategory()
+            "ry, Joined", SourceLine=14)]
+        public virtual void DisplayAllFilters_FilterTypes_KeywordTypeStatusSystemCampaignCategoryJoined()
         {
-            this.DisplayAllFilters("Keyword, Type, Status, System, Campaign, Category", ((string[])(null)));
+            this.DisplayAllFilters("Keyword, Type, Status, System, Campaign, Category, Joined", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
@@ -146,7 +146,7 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Display all filters")]
-        [NUnit.Framework.TestCaseAttribute("Keyword, Type, Status, System, Campaign, Category", null)]
+        [NUnit.Framework.TestCaseAttribute("Keyword, Type, Status, System, Campaign, Category, Joined", null)]
         public virtual void DisplayAllFilters(string filters, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display all filters", exampleTags);

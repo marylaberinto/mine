@@ -4,10 +4,10 @@ namespace findly.TestAutomation.Analytics.PageObjects
 {
     public static class Websites
     {
-        public static Demographics Demographics
+        public static AnalyticsPage AnalyticsPage
         {
-            get { return (Demographics)ScenarioContext.Current["Demographics"]; }
-            set { ScenarioContext.Current.Set(value, "Demographics"); }
+            get { return (AnalyticsPage)ScenarioContext.Current["AnalyticsPage"]; }
+            set { ScenarioContext.Current.Set(value, "AnalyticsPage"); }
         }
 
         public static FindlyCRM FindlyCRM
