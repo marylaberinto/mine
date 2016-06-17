@@ -7,8 +7,8 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
     [Binding]
     public class AuthenticationSteps
     {
-        [Given(@"I log into CRM")]
-        public void GivenILogIntoCrm()
+        [Given(@"I log into CRM as an authenticated user")]
+        public void GivenILogIntoCrmAsAnAuthenticatedUser()
         {
             Websites.FindlyCRM.LogIn(TestSettings.WaggleUserName, TestSettings.WagglePassword);
         }

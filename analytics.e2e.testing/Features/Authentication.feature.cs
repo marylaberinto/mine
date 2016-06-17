@@ -10,17 +10,16 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
-
-using TechTalk.SpecFlow;
-
 #pragma warning disable
 namespace findly.TestAutomation.Analytics.Features
 {
+    using TechTalk.SpecFlow;
+    
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Authentication", new string[] {
-            "PersistExistingFeatureToggle"}, Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to access the" +
-        " Analytics portal", SourceFile="Features\\Authentication.feature", SourceLine=2)]
+    [TechTalk.SpecRun.FeatureAttribute("Authentication", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to access the" +
+        " Analytics portal", SourceFile="Features\\Authentication.feature", SourceLine=0)]
     public partial class AuthenticationFeature
     {
         
@@ -34,8 +33,7 @@ namespace findly.TestAutomation.Analytics.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Authentication", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to access the" +
-                    " Analytics portal", ProgrammingLanguage.CSharp, new string[] {
-                        "PersistExistingFeatureToggle"});
+                    " Analytics portal", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,38 +64,20 @@ namespace findly.TestAutomation.Analytics.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Access Discovery UI", SourceLine=8)]
-        public virtual void AccessDiscoveryUI()
+        [TechTalk.SpecRun.ScenarioAttribute("Access Analytics Portal from CRM", SourceLine=6)]
+        public virtual void AccessAnalyticsPortalFromCRM()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Access Discovery UI", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Access Analytics Portal from CRM", ((string[])(null)));
+#line 7
+this.ScenarioSetup(scenarioInfo);
+#line 8
+ testRunner.Given("I log into CRM as an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-this.ScenarioSetup(scenarioInfo);
-#line 10
- testRunner.Given("AnalyticsPortalAccess is Feature Toggled On", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
- testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 10
  testRunner.Then("I should be able to see the analytics page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
+#line 11
  testRunner.And("I should be able to view Discovery UI", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("No access to Discovery UI", SourceLine=15)]
-        public virtual void NoAccessToDiscoveryUI()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("No access to Discovery UI", ((string[])(null)));
-#line 16
-this.ScenarioSetup(scenarioInfo);
-#line 17
- testRunner.Given("AnalyticsPortalAccess is Feature Toggled Off", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 18
- testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
- testRunner.Then("I should not be able to navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -113,7 +93,6 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Authentication")]
-    [NUnit.Framework.CategoryAttribute("PersistExistingFeatureToggle")]
     public partial class AuthenticationFeature_NUnit
     {
         
@@ -127,8 +106,7 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Authentication", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to access the" +
-                    " Analytics portal", ProgrammingLanguage.CSharp, new string[] {
-                        "PersistExistingFeatureToggle"});
+                    " Analytics portal", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -161,39 +139,20 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Access Discovery UI")]
-        public virtual void AccessDiscoveryUI()
+        [NUnit.Framework.DescriptionAttribute("Access Analytics Portal from CRM")]
+        public virtual void AccessAnalyticsPortalFromCRM()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Access Discovery UI", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Access Analytics Portal from CRM", ((string[])(null)));
+#line 7
+this.ScenarioSetup(scenarioInfo);
+#line 8
+ testRunner.Given("I log into CRM as an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-this.ScenarioSetup(scenarioInfo);
-#line 10
- testRunner.Given("AnalyticsPortalAccess is Feature Toggled On", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
- testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 10
  testRunner.Then("I should be able to see the analytics page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
+#line 11
  testRunner.And("I should be able to view Discovery UI", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("No access to Discovery UI")]
-        public virtual void NoAccessToDiscoveryUI()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("No access to Discovery UI", ((string[])(null)));
-#line 16
-this.ScenarioSetup(scenarioInfo);
-#line 17
- testRunner.Given("AnalyticsPortalAccess is Feature Toggled Off", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 18
- testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
- testRunner.Then("I should not be able to navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -10,17 +10,16 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
-
-using TechTalk.SpecFlow;
-
 #pragma warning disable
 namespace findly.TestAutomation.Analytics.Features
 {
+    using TechTalk.SpecFlow;
+    
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Display Panel", new string[] {
-            "PersistExistingFeatureToggle"}, Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
-        "e panels", SourceFile="Features\\DisplayPanel.feature", SourceLine=1)]
+    [TechTalk.SpecRun.FeatureAttribute("Display Panel", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
+        "e panels", SourceFile="Features\\DisplayPanel.feature", SourceLine=0)]
     public partial class DisplayPanelFeature
     {
         
@@ -34,8 +33,7 @@ namespace findly.TestAutomation.Analytics.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Display Panel", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
-                    "e panels", ProgrammingLanguage.CSharp, new string[] {
-                        "PersistExistingFeatureToggle"});
+                    "e panels", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -69,24 +67,23 @@ namespace findly.TestAutomation.Analytics.Features
         public virtual void DisplayPanels(string panels, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Panels", exampleTags);
-#line 7
+#line 6
 this.ScenarioSetup(scenarioInfo);
+#line 7
+ testRunner.Given("I log into CRM as an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.Given("AnalyticsPortalAccess is Feature Toggled On", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
+#line 9
  testRunner.Then(string.Format("I should be able to see the panels {0}", panels), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Display Panels, Display Panels, Types, Systems, Campaigns, Profile Statuses", SourceLine=14)]
-        public virtual void DisplayPanels_DisplayPanels_TypesSystemsCampaignsProfileStatuses()
+        [TechTalk.SpecRun.ScenarioAttribute("Display Panels, Display Panels, Member Category, Types, Systems, Campaigns, Profi" +
+            "le Statuses, Joined Date", SourceLine=12)]
+        public virtual void DisplayPanels_DisplayPanels_MemberCategoryTypesSystemsCampaignsProfileStatusesJoinedDate()
         {
-            this.DisplayPanels("Types, Systems, Campaigns, Profile Statuses", ((string[])(null)));
+            this.DisplayPanels("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
@@ -100,7 +97,6 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Display Panel")]
-    [NUnit.Framework.CategoryAttribute("PersistExistingFeatureToggle")]
     public partial class DisplayPanelFeature_NUnit
     {
         
@@ -114,8 +110,7 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Display Panel", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
-                    "e panels", ProgrammingLanguage.CSharp, new string[] {
-                        "PersistExistingFeatureToggle"});
+                    "e panels", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -149,19 +144,17 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Display Panels")]
-        [NUnit.Framework.TestCaseAttribute("Types, Systems, Campaigns, Profile Statuses", null)]
+        [NUnit.Framework.TestCaseAttribute("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date", null)]
         public virtual void DisplayPanels(string panels, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Panels", exampleTags);
-#line 7
+#line 6
 this.ScenarioSetup(scenarioInfo);
+#line 7
+ testRunner.Given("I log into CRM as an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.Given("AnalyticsPortalAccess is Feature Toggled On", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.And("I log into CRM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
+#line 9
  testRunner.Then(string.Format("I should be able to see the panels {0}", panels), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
