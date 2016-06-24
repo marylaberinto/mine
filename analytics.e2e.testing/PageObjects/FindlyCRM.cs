@@ -56,10 +56,8 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void NavigateToAnalytics()
         {
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(15)).Exists();
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click();
-            _browser.FindCss("[data-id='analytics']").Exists();
-            _browser.FindCss("[data-id='analytics']").Click();
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click(CoypuOptions.Timeout(15));
+            _browser.FindCss("[data-id='analytics']").Click(CoypuOptions.Timeout(15));
         }
 
         public void AssertIsAnalyticsPage()
