@@ -56,7 +56,8 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void NavigateToAnalytics()
         {
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click(CoypuOptions.Timeout(15));
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(15)).Exists();
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Hover(CoypuOptions.Timeout(15));
             _browser.FindCss("[data-id='analytics']").Click(CoypuOptions.Timeout(15));
         }
 
@@ -68,7 +69,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
         public void AssertNoAccessToAnalytics()
         {
             _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(15)).Exists();
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click();
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Hover(CoypuOptions.Timeout(15));
             Assert.False(_browser.FindCss("[data-id='analytics']").Exists(), "Link to analytics is available to the user");
         }
     }
