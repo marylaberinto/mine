@@ -13,7 +13,7 @@
 
 ### Running ###
 
-* Use NUnit to run the tests.
+* Use an NUnit test-runner to run the tests, or use the TeamCity build.
 
 ### Contribution guidelines ###
 
