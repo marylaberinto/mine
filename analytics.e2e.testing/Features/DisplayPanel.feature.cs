@@ -80,10 +80,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Display Panels, Display Panels, Member Category, Types, Systems, Campaigns, Profi" +
-            "le Statuses, Joined Date", SourceLine=12)]
-        public virtual void DisplayPanels_DisplayPanels_MemberCategoryTypesSystemsCampaignsProfileStatusesJoinedDate()
+            "le Statuses, Joined Date, Tag", SourceLine=12)]
+        public virtual void DisplayPanels_DisplayPanels_MemberCategoryTypesSystemsCampaignsProfileStatusesJoinedDateTag()
         {
-            this.DisplayPanels("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date", ((string[])(null)));
+            this.DisplayPanels("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date, Tag", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
@@ -144,7 +144,7 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Display Panels")]
-        [NUnit.Framework.TestCaseAttribute("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date", null)]
+        [NUnit.Framework.TestCaseAttribute("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date, Tag", null)]
         public virtual void DisplayPanels(string panels, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Panels", exampleTags);
