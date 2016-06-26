@@ -12,36 +12,23 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         {
             Websites.FindlyCRM.LogIn(TestSettings.WaggleUserName, TestSettings.WagglePassword);
         }
-        
+
         [When(@"I navigate to the analytics portal")]
         public void WhenINavigateToTheAnalyticsPortal()
         {
             Websites.FindlyCRM.NavigateToAnalytics();
         }
-        
+
         [Then(@"I should be able to see the analytics page")]
         public void ThenIShouldBeAbleToSeeTheAnalyticsPage()
         {
             Websites.FindlyCRM.AssertIsAnalyticsPage();
         }
-        
+
         [Then(@"I should be able to view Discovery UI")]
         public void ThenIShouldBeAbleToViewDiscoveryUi()
         {
             Websites.AnalyticsPage.AssertDiscoveryuiLoaded();
         }
-
-        [Then(@"I should not be able to navigate to the analytics portal")]
-        public void ThenIShouldNotBeAbleToNavigateToTheAnalyticsPortal ()
-        {
-            Websites.FindlyCRM.AssertNoAccessToAnalytics();
-        }
-
-        [Then(@"I should not be able to see the analytics page")]
-        public void ThenIShouldNotBeAbleToSeeTheAnalyticsPage()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
     }
 }

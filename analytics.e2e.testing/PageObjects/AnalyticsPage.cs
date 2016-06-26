@@ -14,8 +14,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
         //Analytics Constructor
         public AnalyticsPage()
         {
-            //In absence of any other attribute, using empty string for finding the frame on the page.
-            _analyticsiFrame = _browser.FindWindow("Findly Analytics").FindFrame("");
+            _analyticsiFrame = _browser.FindWindow("Findly Analytics").FindFrame("iFrameResizer0");
         }
 
         public void AssertDiscoveryuiLoaded()

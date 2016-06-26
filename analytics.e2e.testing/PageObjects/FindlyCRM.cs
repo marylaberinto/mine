@@ -37,7 +37,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
             _browser.FindCss("[data-id='logout']").Click();
         }
 
-        private bool IsCorrectUserSignedIn (string userName)
+        private bool IsCorrectUserSignedIn(string userName)
         {
             if (!FeatureContextWrapper.IsLoggedIn) return false;
             if (FeatureContextWrapper.LoggedInUser != userName)
@@ -63,14 +63,8 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void AssertIsAnalyticsPage()
         {
-            Assert.True(_browser.FindWindow("Findly Analytics", CoypuOptions.Timeout(15)).Exists(), "The user did not re-direct to Analytics page");
-        }
-
-        public void AssertNoAccessToAnalytics()
-        {
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(15)).Exists();
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Hover(CoypuOptions.Timeout(15));
-            Assert.False(_browser.FindCss("[data-id='analytics']").Exists(), "Link to analytics is available to the user");
+            Assert.True(_browser.FindWindow("Findly Analytics", CoypuOptions.Timeout(15)).Exists(),
+                "The user did not re-direct to Analytics page");
         }
     }
 }
