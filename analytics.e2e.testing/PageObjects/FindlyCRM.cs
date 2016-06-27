@@ -56,9 +56,19 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void NavigateToAnalytics()
         {
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(15)).Exists();
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Hover(CoypuOptions.Timeout(15));
-            _browser.FindCss("[data-id='analytics']").Click(CoypuOptions.Timeout(15));
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(30)).Exists();
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click();
+
+            //Forcing the display of Settings dropdown by toggling the CSS class display to 'block'
+            _browser.ExecuteScript(
+                "$('li.dropdown.nav-noaction-js.settings-dropdown ul.dropdown-menu').css('display', 'block');");
+
+            //Select the option
+            _browser.FindCss("[data-id='analytics']").Exists();
+            _browser.FindCss("[data-id='analytics']").Click();
+
+            //Force Hide Settings dropdown
+            _browser.ExecuteScript("$('li.dropdown.nav-noaction-js.settings-dropdown ul.dropdown-menu').css('display', '');");
         }
 
         public void AssertIsAnalyticsPage()
