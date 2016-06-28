@@ -25,6 +25,9 @@ namespace findly.TestAutomation.Analytics.PageObjects
             _browser.FindId("Password").FillInWith(password);
             _browser.FindId("btnSubmit").Click();
 
+            //Looking for the recruiter icon to assert login because it is often one of the last things to load when signing in, and Waggle has trouble if we move to a new page quickly.
+            _browser.FindCss("a[data-id='settings'] img[alt='recruiter icon']").Exists(CoypuOptions.Timeout(90));
+
             FeatureContextWrapper.IsLoggedIn = true;
             FeatureContextWrapper.LoggedInUser = userName;
         }
@@ -56,7 +59,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void NavigateToAnalytics()
         {
-            _browser.FindCss("ul.navbar-nav a[data-id=settings]", CoypuOptions.Timeout(30)).Exists();
+            _browser.FindCss("ul.navbar-nav a[data-id=settings]").Exists();
             _browser.FindCss("ul.navbar-nav a[data-id=settings]").Click();
 
             //Forcing the display of Settings dropdown by toggling the CSS class display to 'block'
@@ -68,12 +71,13 @@ namespace findly.TestAutomation.Analytics.PageObjects
             _browser.FindCss("[data-id='analytics']").Click();
 
             //Force Hide Settings dropdown
-            _browser.ExecuteScript("$('li.dropdown.nav-noaction-js.settings-dropdown ul.dropdown-menu').css('display', '');");
+            _browser.ExecuteScript(
+                "$('li.dropdown.nav-noaction-js.settings-dropdown ul.dropdown-menu').css('display', '');");
         }
 
         public void AssertIsAnalyticsPage()
         {
-            Assert.True(_browser.FindWindow("Findly Analytics", CoypuOptions.Timeout(15)).Exists(),
+            Assert.True(_browser.FindWindow("Findly Analytics", CoypuOptions.Timeout(60)).Exists(),
                 "The user did not re-direct to Analytics page");
         }
     }
