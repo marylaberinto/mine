@@ -3,6 +3,7 @@ using System.Linq;
 using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
 using NUnit.Framework;
+using OpenQA.Selenium;
 
 namespace findly.TestAutomation.Analytics.PageObjects
 {
@@ -19,7 +20,8 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void AssertDiscoveryuiLoaded()
         {
-            Assert.True(_analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).Exists(), "Discovery UI Search bar failed to load");
+            Assert.True(_analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).Exists(),
+                "Discovery UI Search bar failed to load");
         }
 
         public void AssertHasPanelLoaded(List<string> panelNameList)
@@ -44,6 +46,28 @@ namespace findly.TestAutomation.Analytics.PageObjects
             var actualFilters = filterElements.Select(filterElement => filterElement.Text).ToList();
             CollectionAssert.AreEquivalent(filterList, actualFilters,
                 "Atleast one of the filters has not loaded correctly");
+        }
+
+        public void Search(string value)
+        {
+            EnterCriteriaInSearchField(value);
+            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).SendKeys(Keys.Enter);
+        }
+
+        public void AssertSearchTag(string parameter)
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var actualParameter = _analyticsiFrame.FindCss(".square--primary").Text;
+            Assert.AreEqual(parameter, actualParameter, "The query tag does not match the search parameter");
+        }
+
+        public void AssertSearchQuery(string query)
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var actualQuery =
+                _analyticsiFrame.FindId("demographic-active-query", new Options {ConsiderInvisibleElements = true})
+                    .InnerHTML;
+            StringAssert.Contains(query, actualQuery, "The query string does not match the search criteria");
         }
     }
 }
