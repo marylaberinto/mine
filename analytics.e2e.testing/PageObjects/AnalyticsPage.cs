@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
@@ -11,6 +12,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
     {
         private readonly BrowserSession _browser = FeatureContextWrapper.BrowserSession;
         private readonly ElementScope _analyticsiFrame;
+        private string value;
 
         //Analytics Constructor
         public AnalyticsPage()
@@ -31,6 +33,23 @@ namespace findly.TestAutomation.Analytics.PageObjects
             var panelTitles = panelElements.Select(panelElement => panelElement.Text).ToList();
             CollectionAssert.AreEquivalent(panelNameList, panelTitles,
                 "Atleast one of the panel titles has not loaded correctly");
+        }
+
+        public void WhenIEnterAFullQualifier()
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).FillInWith("status:");
+        }
+
+        public void WhenIPressEnter()
+        {
+            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).SendKeys(Keys.Enter);
+        }
+
+        public void WhenIenterPartialQualifier()
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).FillInWith("ty:");
         }
 
         public void EnterCriteriaInSearchField(string value)

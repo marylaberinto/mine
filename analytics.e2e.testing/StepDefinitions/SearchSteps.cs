@@ -28,5 +28,24 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         {
             Websites.AnalyticsPage.AssertSearchQuery(query);
         }
+
+        [When(@"I enter '(.*)'")]
+        public void WhenIEnter(string p0)
+        {
+            Websites.AnalyticsPage.WhenIenterPartialQualifier();
+        }
+
+        [When(@"I press enter")]
+        public void WhenIPressEnter()
+        {
+            Websites.AnalyticsPage.WhenIPressEnter();
+        }
+
+        [When(@"I enter a full qualifier '(.*)'")]
+        public void WhenIEnterAFullQualifier(string p0)
+        {
+            Websites.AnalyticsPage.WhenIEnterAFullQualifier();
+        }
+
     }
 }

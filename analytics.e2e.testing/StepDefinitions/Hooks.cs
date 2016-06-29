@@ -53,7 +53,7 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         }
 
         [AfterScenario]
-        public static void ScenarioTearDown ()
+        public static void ScenarioTearDown()
         {
             var sauceLabsEnabled = bool.Parse(ConfigurationManager.AppSettings["SauceLabs.Enabled"]);
             var browserSession = FeatureContextWrapper.BrowserSession;
@@ -88,24 +88,30 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
                     screenShot.SaveAsFile(screenshotFileLocation, TestSettings.ScreenShotImageFormat);
                     Console.WriteLine("\r\nScenario Screenshot saved to: " + screenshotFileLocation);
                     Console.WriteLine("\r\nScenario Available at: " + screenshotUrl);
-                } finally
-                {
-                    FeatureContextWrapper.ClearSignedInUser();
-                    FeatureContextWrapper.BrowserSession.Dispose();
                 }
-            }
+                finally { }
 
-            if (!sauceLabsEnabled) return;
-            try
-            {
-                FeatureContextWrapper.BrowserSession.ExecuteScript(isScenarioFailed
-                    ? "sauce:job-result=failed"
-                    : "sauce:job-result=passed");
-            } finally
-            {
+                { }
+            }
+        }
+            //        FeatureContextWrapper.ClearSignedInUser();
+            //        FeatureContextWrapper.BrowserSession.Dispose();
+            //    }
+            //}
+
+                    //if (!sauceLabsEnabled) return;
+                    //try
+                    //{
+                    //    FeatureContextWrapper.BrowserSession.ExecuteScript(isScenarioFailed
+                    //        ? "sauce:job-result=failed"
+                    //        : "sauce:job-result=passed");
+                    //} finally
+        [AfterScenario]
+        public static void AfterScenarioTearDown()
+        {
                 FeatureContextWrapper.ClearSignedInUser();
                 FeatureContextWrapper.BrowserSession.Dispose();
             }
         }
     }
-}
+
