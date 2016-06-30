@@ -10,17 +10,22 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
     [Binding]
     public class SearchSteps
     {
+        [When(@"I enter qualifier (.*)")]
+        public void WhenIEnterQualifier (string value)
+        {
+            Websites.AnalyticsPage.EnterQualifier(value);
+        }
+
         [When(@"I search with the criteria (.*)")]
         public void WhenISearchWithTheCriteria (string value)
         {
-            Websites.AnalyticsPage.Search(value);
+            Websites.AnalyticsPage.EnterCriteria(value);
         }
 
         [Then(@"I should see the search tag (.*)")]
         public void ThenIShouldSeeTheSearchTag (string parameter)
         {
-            Websites.AnalyticsPage.AssertSearchTag(parameter);
-            
+            Websites.AnalyticsPage.AssertSearchTag(parameter);           
         }
 
         [Then(@"I should see the query containing (.*)")]
@@ -28,24 +33,5 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         {
             Websites.AnalyticsPage.AssertSearchQuery(query);
         }
-
-        [When(@"I enter '(.*)'")]
-        public void WhenIEnter(string p0)
-        {
-            Websites.AnalyticsPage.WhenIenterPartialQualifier();
-        }
-
-        [When(@"I press enter")]
-        public void WhenIPressEnter()
-        {
-            Websites.AnalyticsPage.WhenIPressEnter();
-        }
-
-        [When(@"I enter a full qualifier '(.*)'")]
-        public void WhenIEnterAFullQualifier(string p0)
-        {
-            Websites.AnalyticsPage.WhenIEnterAFullQualifier();
-        }
-
     }
 }

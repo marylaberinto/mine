@@ -5,6 +5,8 @@ using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using TechTalk.SpecFlow;
 
 namespace findly.TestAutomation.Analytics.PageObjects
 {
@@ -12,7 +14,6 @@ namespace findly.TestAutomation.Analytics.PageObjects
     {
         private readonly BrowserSession _browser = FeatureContextWrapper.BrowserSession;
         private readonly ElementScope _analyticsiFrame;
-        private string value;
 
         //Analytics Constructor
         public AnalyticsPage()
@@ -35,23 +36,6 @@ namespace findly.TestAutomation.Analytics.PageObjects
                 "Atleast one of the panel titles has not loaded correctly");
         }
 
-        public void WhenIEnterAFullQualifier()
-        {
-            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
-            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).FillInWith("status:");
-        }
-
-        public void WhenIPressEnter()
-        {
-            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).SendKeys(Keys.Enter);
-        }
-
-        public void WhenIenterPartialQualifier()
-        {
-            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
-            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).FillInWith("ty:");
-        }
-
         public void EnterCriteriaInSearchField(string value)
         {
             if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
@@ -67,10 +51,10 @@ namespace findly.TestAutomation.Analytics.PageObjects
                 "Atleast one of the filters has not loaded correctly");
         }
 
-        public void Search(string value)
+        public void EnterCriteria(string value)
         {
             EnterCriteriaInSearchField(value);
-            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).SendKeys(Keys.Enter);
+            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(60)).SendKeys(Keys.Enter, CoypuOptions.Timeout(60));
         }
 
         public void AssertSearchTag(string parameter)
@@ -87,6 +71,14 @@ namespace findly.TestAutomation.Analytics.PageObjects
                 _analyticsiFrame.FindId("demographic-active-query", new Options {ConsiderInvisibleElements = true})
                     .InnerHTML;
             StringAssert.Contains(query, actualQuery, "The query string does not match the search criteria");
+        }
+
+        public void EnterQualifier(string value)
+        {
+            EnterCriteriaInSearchField(value);
+            if (!_analyticsiFrame.FindCss(".search-bar__panel-section").Exists(CoypuOptions.Timeout(60))) return;
+            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(60))
+                .SendKeys(Keys.Enter, CoypuOptions.Timeout(60));
         }
     }
 }

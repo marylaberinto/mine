@@ -16,28 +16,25 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
     {
         private static IObjectContainer ObjectContainer
         {
-            get
-            {
-                return (IObjectContainer)ScenarioContext.Current.GetBindingInstance(typeof(IObjectContainer));
-            }
+            get { return (IObjectContainer) ScenarioContext.Current.GetBindingInstance(typeof (IObjectContainer)); }
         }
 
         [BeforeFeature]
-        public static void FeatureSetup ()
+        public static void FeatureSetup()
         {
             FeatureContextWrapper.ClearSignedInUser();
 
         }
 
         [AfterFeature]
-        public static void FeatureTearDown ()
+        public static void FeatureTearDown()
         {
             if (FeatureContextWrapper.BrowserSession == null) return;
             FeatureContextWrapper.BrowserSession.Dispose();
         }
 
         [BeforeScenario]
-        public static void ScenarioSetUp ()
+        public static void ScenarioSetUp()
         {
             ObjectContainer.RegisterTypeAs<FeatureToggleService, IFeatureToggleService>();
             FeatureContextWrapper.BrowserSession = BrowserFactory.GetBrowser();
@@ -72,7 +69,7 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
                                        DateTime.UtcNow.Second;
 
                     // Save HTML source to file
-                    var source = ((IWebDriver)driver).PageSource;
+                    var source = ((IWebDriver) driver).PageSource;
                     var sourceFileName = scenarioName + ".html";
                     var sourceFileLocation = TestSettings.ScreenShotDirectory + sourceFileName;
                     var sourceUrl = ConfigurationManager.AppSettings["HttpUrlForScreenShot"] + sourceFileName;
@@ -81,7 +78,7 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
                     Console.WriteLine("\r\nHtml Available at: " + sourceUrl);
 
                     // Save screenshot to file
-                    var screenShot = ((ITakesScreenshot)driver).GetScreenshot();
+                    var screenShot = ((ITakesScreenshot) driver).GetScreenshot();
                     var screenshotFilename = scenarioName + ".png";
                     var screenshotFileLocation = TestSettings.ScreenShotDirectory + screenshotFilename;
                     var screenshotUrl = ConfigurationManager.AppSettings["HttpUrlForScreenShot"] + screenshotFilename;
@@ -89,29 +86,29 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
                     Console.WriteLine("\r\nScenario Screenshot saved to: " + screenshotFileLocation);
                     Console.WriteLine("\r\nScenario Available at: " + screenshotUrl);
                 }
-                finally { }
+                finally
+                {
+                }
+            }
 
-                { }
+            if (!sauceLabsEnabled) return;
+            try
+            {
+                FeatureContextWrapper.BrowserSession.ExecuteScript(isScenarioFailed
+                    ? "sauce:job-result=failed"
+                    : "sauce:job-result=passed");
+            }
+            finally
+            {
             }
         }
-            //        FeatureContextWrapper.ClearSignedInUser();
-            //        FeatureContextWrapper.BrowserSession.Dispose();
-            //    }
-            //}
 
-                    //if (!sauceLabsEnabled) return;
-                    //try
-                    //{
-                    //    FeatureContextWrapper.BrowserSession.ExecuteScript(isScenarioFailed
-                    //        ? "sauce:job-result=failed"
-                    //        : "sauce:job-result=passed");
-                    //} finally
         [AfterScenario]
         public static void AfterScenarioTearDown()
         {
-                FeatureContextWrapper.ClearSignedInUser();
-                FeatureContextWrapper.BrowserSession.Dispose();
-            }
+            FeatureContextWrapper.ClearSignedInUser();
+            FeatureContextWrapper.BrowserSession.Dispose();
         }
     }
+}
 
