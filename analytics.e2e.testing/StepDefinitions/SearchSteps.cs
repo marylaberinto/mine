@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using findly.TestAutomation.Analytics.PageObjects;
+﻿using findly.TestAutomation.Analytics.PageObjects;
 using TechTalk.SpecFlow;
 
 namespace findly.TestAutomation.Analytics.StepDefinitions
@@ -22,14 +18,20 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
             Websites.AnalyticsPage.EnterCriteria(value);
         }
 
+        [When(@"I click on (.*) panel entry (.*)")]
+        public void WhenIClickOnAPanelEntry (string panelTitle, string parameter )
+        {
+            Websites.AnalyticsPage.SelectPanelEntry(panelTitle, parameter);
+        }
+
         [Then(@"I should see the search tag (.*)")]
         public void ThenIShouldSeeTheSearchTag (string parameter)
         {
             Websites.AnalyticsPage.AssertSearchTag(parameter);           
         }
 
-        [Then(@"I should see the query containing (.*)")]
-        public void ThenIShouldSeeTheQueryContaining (string query)
+        [Then(@"The search query should contain the string (.*)")]
+        public void ThenTheSearchQueryShouldContainTheString (string query)
         {
             Websites.AnalyticsPage.AssertSearchQuery(query);
         }

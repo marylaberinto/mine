@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using TechTalk.SpecFlow;
 
 namespace findly.TestAutomation.Analytics.PageObjects
 {
@@ -30,8 +27,8 @@ namespace findly.TestAutomation.Analytics.PageObjects
 
         public void AssertDemographicsTabisSelected()
         {
-            Assert.True(_analyticsiFrame.FindCss(".tab__text--active", CoypuOptions.Timeout(20)).Exists(),
-                "Demographics tab is not selected");
+            var actualTab = _analyticsiFrame.FindCss(".tab__text--active", CoypuOptions.Timeout(20)).Text;
+            StringAssert.AreEqualIgnoringCase("Demographics", actualTab, "Demographics tab is not selected");
         }
 
         public void AssertDiscoveryuiLoaded()
@@ -106,6 +103,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
             var actualOperator = _analyticsiFrame.FindCss("a[data-op-key]").Text;
             StringAssert.AreEqualIgnoringCase(op, actualOperator, "Unable to find the expected operator");
         }
+
         public void AssertHasTabsLoaded(List<string> tabNameList)
         {
             if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
@@ -113,6 +111,14 @@ namespace findly.TestAutomation.Analytics.PageObjects
             var tabTitles = tabsElements.Select(tabsElement => tabsElement.Text).ToList();
             CollectionAssert.AreEquivalent(tabNameList, tabTitles,
                 "Atleast one of the tab titles has not loaded correctly");
+        }
+
+        public void SelectPanelEntry(string panelTitle, string parameter)
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            //This should work after DMP-681 
+            var rowElement = string.Format("data-item-type={0} data-item-name={1}", panelTitle, parameter);
+            _analyticsiFrame.FindCss(rowElement).Click();
         }
     }
 }

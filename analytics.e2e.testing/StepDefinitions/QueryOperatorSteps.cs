@@ -1,5 +1,4 @@
 ﻿using findly.TestAutomation.Analytics.PageObjects;
-using System;
 using TechTalk.SpecFlow;
 
 namespace findly.TestAutomation.Analytics.StepDefinitions

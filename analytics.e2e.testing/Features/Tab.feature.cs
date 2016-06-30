@@ -10,12 +10,12 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
+
+using TechTalk.SpecFlow;
+
 #pragma warning disable
 namespace findly.TestAutomation.Analytics.Features
 {
-    using TechTalk.SpecFlow;
-    
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Tab", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
@@ -126,7 +126,7 @@ this.FeatureBackground();
 #line 25
  testRunner.Then("I should see the search tag Type: Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 26
-    testRunner.And("I should see the query containing Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("The search query should contain the string Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -148,7 +148,7 @@ this.FeatureBackground();
 #line 32
  testRunner.Then("I should see the search tag Category: Profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 33
-    testRunner.And("I should see the query containing Profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("The search query should contain the string Profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -270,7 +270,7 @@ this.FeatureBackground();
 #line 25
  testRunner.Then("I should see the search tag Type: Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 26
-    testRunner.And("I should see the query containing Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("The search query should contain the string Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -293,7 +293,7 @@ this.FeatureBackground();
 #line 32
  testRunner.Then("I should see the search tag Category: Profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 33
-    testRunner.And("I should see the query containing Profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("The search query should contain the string Profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
