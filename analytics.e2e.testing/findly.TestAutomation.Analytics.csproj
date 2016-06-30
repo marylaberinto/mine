@@ -127,6 +127,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FilterTypes.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QueryOperator.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryOperator.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Search.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,6 +160,7 @@
     <Compile Include="StepDefinitions\DisplayPanelSteps.cs" />
     <Compile Include="StepDefinitions\FilterTypesSteps.cs" />
     <Compile Include="StepDefinitions\Hooks.cs" />
+    <Compile Include="StepDefinitions\QueryOperatorSteps.cs" />
     <Compile Include="StepDefinitions\SearchSteps.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +186,10 @@
     <None Include="Features\FilterTypes.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>FilterTypes.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QueryOperator.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>QueryOperator.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Search.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

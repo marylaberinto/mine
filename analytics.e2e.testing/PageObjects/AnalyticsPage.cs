@@ -80,5 +80,18 @@ namespace findly.TestAutomation.Analytics.PageObjects
             _analyticsiFrame.FindId("search", CoypuOptions.Timeout(60))
                 .SendKeys(Keys.Enter, CoypuOptions.Timeout(60));
         }
+
+        public void ClickOnOperator(string op)
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            _analyticsiFrame.FindCss(".chip.chip--light").Click();
+        }
+
+        public void AssertQueryOperator(string op)
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var actualOperator = _analyticsiFrame.FindCss("a[data-op-key]").Text;
+            StringAssert.AreEqualIgnoringCase(op, actualOperator, "Unable to find the expected operator");
+        }
     }
 }
