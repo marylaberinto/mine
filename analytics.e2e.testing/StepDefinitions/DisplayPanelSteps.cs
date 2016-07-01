@@ -11,7 +11,7 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         public void ThenIShouldBeAbleToSeeThePanels (string panelNames)
         {
             var panelNameList = panelNames.Replace(", ", ",").Split(',').ToList(); 
-            Websites.AnalyticsPage.AssertHasPanelLoaded(panelNameList);
+            Websites.AnalyticsPage.AssertHasPanelsLoaded(panelNameList);
         }
     }
 }

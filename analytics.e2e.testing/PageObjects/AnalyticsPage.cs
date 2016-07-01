@@ -15,10 +15,23 @@ namespace findly.TestAutomation.Analytics.PageObjects
         private readonly BrowserSession _browser = FeatureContextWrapper.BrowserSession;
         private readonly ElementScope _analyticsiFrame;
 
+
         //Analytics Constructor
         public AnalyticsPage()
         {
             _analyticsiFrame = _browser.FindWindow("Findly Analytics").FindFrame("iFrameResizer0");
+        }
+
+        public void WhenIClickOnDemographicsTab()
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            _analyticsiFrame.FindXPath(".//*[@id='root']/div/div[2]/div/div/ul/li[2]/a").Click();
+        }
+
+        public void AssertDemographicsTabisSelected()
+        {
+            Assert.True(_analyticsiFrame.FindCss(".tab__text--active", CoypuOptions.Timeout(20)).Exists(),
+                "Demographics tab is not selected");
         }
 
         public void AssertDiscoveryuiLoaded()
@@ -27,7 +40,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
                 "Discovery UI Search bar failed to load");
         }
 
-        public void AssertHasPanelLoaded(List<string> panelNameList)
+        public void AssertHasPanelsLoaded(List<string> panelNameList)
         {
             if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
             var panelElements = _analyticsiFrame.FindAllCss(".card__header-title", null, CoypuOptions.Timeout(60));
@@ -92,6 +105,14 @@ namespace findly.TestAutomation.Analytics.PageObjects
             if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
             var actualOperator = _analyticsiFrame.FindCss("a[data-op-key]").Text;
             StringAssert.AreEqualIgnoringCase(op, actualOperator, "Unable to find the expected operator");
+        }
+        public void AssertHasTabsLoaded(List<string> tabNameList)
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var tabsElements = _analyticsiFrame.FindAllCss(".tabs", null, CoypuOptions.Timeout(60));
+            var tabTitles = tabsElements.Select(tabsElement => tabsElement.Text).ToList();
+            CollectionAssert.AreEquivalent(tabNameList, tabTitles,
+                "Atleast one of the tab titles has not loaded correctly");
         }
     }
 }

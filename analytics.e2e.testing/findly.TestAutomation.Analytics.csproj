@@ -137,8 +137,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Search.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Tab.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tab.feature</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\CoypuOptions.cs" />
     <Compile Include="PageObjects\AnalyticsPage.cs" />
+    <Compile Include="PageObjects\tabPanel.cs" />
     <Compile Include="PageObjects\Websites.cs" />
     <Compile Include="PageObjects\FindlyCRM.cs" />
     <Compile Include="Features\Authentication.feature.cs">
@@ -162,6 +168,7 @@
     <Compile Include="StepDefinitions\Hooks.cs" />
     <Compile Include="StepDefinitions\QueryOperatorSteps.cs" />
     <Compile Include="StepDefinitions\SearchSteps.cs" />
+    <Compile Include="StepDefinitions\TabSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
@@ -194,6 +201,10 @@
     <None Include="Features\Search.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Search.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Tab.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Tab.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
