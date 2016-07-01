@@ -16,9 +16,9 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         }
 
         [When(@"I click on Demographics tab")]
-        public void WhenIClickOnDemographicsTab()
+        public void ClickOnDemographicsTab()
         {
-            Websites.AnalyticsPage.WhenIClickOnDemographicsTab();
+            Websites.AnalyticsPage.ClickOnDemographicsTab();
         }
 
         [Then(@"the Demographics tab should be selected")]

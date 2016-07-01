@@ -22,7 +22,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
             _analyticsiFrame = _browser.FindWindow("Findly Analytics").FindFrame("iFrameResizer0");
         }
 
-        public void WhenIClickOnDemographicsTab()
+        public void ClickOnDemographicsTab()
         {
             if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
             _analyticsiFrame.FindXPath(".//*[@id='root']/div/div[2]/div/div/ul/li[2]/a").Click();
