@@ -22,7 +22,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
         public void ClickOnDemographicsTab()
         {
             if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
-            _analyticsiFrame.FindXPath(".//*[@id='root']/div/div[2]/div/div/ul/li[2]/a").Click();
+            _analyticsiFrame.FindLink("Demographics").Click();
         }
 
         public void AssertDemographicsTabisSelected()
