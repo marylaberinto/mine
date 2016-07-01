@@ -10,16 +10,22 @@ Background:
 Scenario: Single Basic Search
 	When I search with the criteria Emp
 	Then I should see the search tag Keyword: Emp
-	And I should see the query containing Emp
+	And The search query should contain the string Emp
 
 Scenario: Basic Search with partial qualifier
 	When I enter qualifier ty:
     And I search with the criteria Employee
 	Then I should see the search tag Type: Employee
-    And I should see the query containing Employee
+    And The search query should contain the string Employee
 
 Scenario: Basic Search with full qualifier
 	When I enter qualifier Status: 
     And I search with the criteria Student
 	Then I should see the search tag Status: Student
-    And I should see the query containing Student
+    And The search query should contain the string Student
+
+#To be tested after DMP-681
+#Scenario: Search by selecting from panel
+#	When I click on Types panel entry Unknown
+#	Then I should see the search tag Type: Unknown
+#	And The search query should contain the string Unknown

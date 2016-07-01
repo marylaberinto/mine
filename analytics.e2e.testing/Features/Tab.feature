@@ -23,14 +23,14 @@ Scenario: Changing tab with query
     And I search with the criteria Employee
 	And I click on Demographics tab
 	Then I should see the search tag Type: Employee
-    And I should see the query containing Employee 
+    And The search query should contain the string Employee 
 
 Scenario: Creating other queries from other panel not in Demographics
 	When I click on Demographics tab
 	And I enter qualifier cat:
 	And I search with the criteria Profile
 	Then I should see the search tag Category: Profile
-    And I should see the query containing Profile
+    And The search query should contain the string Profile
     
 
 

@@ -1,6 +1,5 @@
-﻿using findly.TestAutomation.Analytics.PageObjects;
-using System;
-using System.Linq;
+﻿using System.Linq;
+using findly.TestAutomation.Analytics.PageObjects;
 using TechTalk.SpecFlow;
 
 namespace findly.TestAutomation.Analytics.StepDefinitions
@@ -16,7 +15,7 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
         }
 
         [When(@"I click on Demographics tab")]
-        public void ClickOnDemographicsTab()
+        public void WhenIClickOnDemographicsTab()
         {
             Websites.AnalyticsPage.ClickOnDemographicsTab();
         }
