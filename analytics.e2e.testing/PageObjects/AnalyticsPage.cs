@@ -107,7 +107,7 @@ namespace findly.TestAutomation.Analytics.PageObjects
         public void AssertHasTabsLoaded(List<string> tabNameList)
         {
             if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
-            var tabsElements = _analyticsiFrame.FindAllCss(".tabs", null, CoypuOptions.Timeout(60));
+            var tabsElements = _analyticsiFrame.FindAllCss(".tab", null, CoypuOptions.Timeout(60));
             var tabTitles = tabsElements.Select(tabsElement => tabsElement.Text).ToList();
             CollectionAssert.AreEquivalent(tabNameList, tabTitles,
                 "Atleast one of the tab titles has not loaded correctly");
