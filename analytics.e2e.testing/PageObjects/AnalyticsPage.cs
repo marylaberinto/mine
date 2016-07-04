@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
@@ -119,6 +120,17 @@ namespace findly.TestAutomation.Analytics.PageObjects
             //This should work after DMP-681 
             var rowElement = string.Format("data-item-type={0} data-item-name={1}", panelTitle, parameter);
             _analyticsiFrame.FindCss(rowElement).Click();
+        }
+
+        public void AssertAutoSuggestExist ()
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var popupExists = _analyticsiFrame.FindCss(".search-bar__panel").Exists();
+            Assert.IsTrue(popupExists, "Autosuggest popup doesn't exist");
+            
+            
+
+
         }
     }
 }
