@@ -18,22 +18,22 @@ namespace findly.TestAutomation.Analytics.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Authentication", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to access the" +
-        " Analytics portal", SourceFile="Features\\Authentication.feature", SourceLine=0)]
-    public partial class AuthenticationFeature
+    [TechTalk.SpecRun.FeatureAttribute("AutoSuggest", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all au" +
+        "tosuggest I can use", SourceFile="Features\\AutoSuggest.feature", SourceLine=0)]
+    public partial class AutoSuggestFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Authentication.feature"
+#line 1 "AutoSuggest.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Authentication", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to access the" +
-                    " Analytics portal", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AutoSuggest", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all au" +
+                    "tosuggest I can use", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,20 +64,30 @@ namespace findly.TestAutomation.Analytics.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Access Analytics Portal from CRM", SourceLine=6)]
-        public virtual void AccessAnalyticsPortalFromCRM()
+        public virtual void FeatureBackground()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Access Analytics Portal from CRM", ((string[])(null)));
+#line 6
 #line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
  testRunner.Given("I log into CRM as an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
+#line 8
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Display autosuggest popup", SourceLine=9)]
+        public virtual void DisplayAutosuggestPopup()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display autosuggest popup", ((string[])(null)));
 #line 10
- testRunner.Then("I should be able to see the analytics page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line 11
- testRunner.And("I should be able to view Discovery UI", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I enter qualifier System:", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.And("I enter the criteria f", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.Then("I should be able to see the autosuggest popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -92,21 +102,21 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Authentication")]
-    public partial class AuthenticationFeature_NUnit
+    [NUnit.Framework.DescriptionAttribute("AutoSuggest")]
+    public partial class AutoSuggestFeature_NUnit
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Authentication.feature"
+#line 1 "AutoSuggest.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Authentication", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to access the" +
-                    " Analytics portal", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AutoSuggest", "In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all au" +
+                    "tosuggest I can use", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -138,21 +148,31 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Access Analytics Portal from CRM")]
-        public virtual void AccessAnalyticsPortalFromCRM()
+        public virtual void FeatureBackground()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Access Analytics Portal from CRM", ((string[])(null)));
+#line 6
 #line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
  testRunner.Given("I log into CRM as an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
+#line 8
  testRunner.When("I navigate to the analytics portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Display autosuggest popup")]
+        public virtual void DisplayAutosuggestPopup()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display autosuggest popup", ((string[])(null)));
 #line 10
- testRunner.Then("I should be able to see the analytics page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line 11
- testRunner.And("I should be able to view Discovery UI", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I enter qualifier System:", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.And("I enter the criteria f", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.Then("I should be able to see the autosuggest popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
@@ -10,9 +11,11 @@ namespace findly.TestAutomation.Analytics.PageObjects
     public class AnalyticsPage
     {
         private readonly BrowserSession _browser = FeatureContextWrapper.BrowserSession;
+
+       
         private readonly ElementScope _analyticsiFrame;
 
-
+        
         //Analytics Constructor
         public AnalyticsPage()
         {
@@ -120,5 +123,19 @@ namespace findly.TestAutomation.Analytics.PageObjects
             var rowElement = string.Format("data-item-type={0} data-item-name={1}", panelTitle, parameter);
             _analyticsiFrame.FindCss(rowElement).Click();
         }
+
+        public void EntertheCriteria (string value)
+        {
+            EnterCriteriaInSearchField(value);
+            _analyticsiFrame.FindId("search", CoypuOptions.Timeout(60)).FillInWith(value);
+        }
+
+        public void AssertAutoSuggestExist ()
+        {
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var popupExists = _analyticsiFrame.FindCss(".search-bar__panel", CoypuOptions.Timeout(60)).Exists();
+           Assert.IsTrue(popupExists, "Autosuggest popup doesn't exist");
+        }
+
+        }
     }
-}
