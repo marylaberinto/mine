@@ -8,8 +8,8 @@ Background:
 	When I navigate to the analytics portal
 
 Scenario: Display autosuggest popup
-	When I enter qualifier Campaign: 
-	And I search with the criteria Cp
+	When I enter qualifier System: 
+	And I enter the criteria f
 	Then I should be able to see the autosuggest popup
 
 
