@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Coypu;
 using findly.TestAutomation.Analytics.Helpers;
@@ -27,12 +28,12 @@ namespace findly.TestAutomation.Analytics.PageObjects
             _analyticsiFrame.FindLink("Demographics").Click();
         }
 
-        public void AssertDemographicsTabisSelected()
+        public void AssertDemographicsTabisSelected(string tab)
         {
-            var actualTab = _analyticsiFrame.FindCss(".tab__text--active", CoypuOptions.Timeout(20)).Text;
+            if (!_analyticsiFrame.Exists(CoypuOptions.Timeout(60))) return;
+            var actualTab = _analyticsiFrame.FindCss(".tab.tab--active").Text;
             StringAssert.AreEqualIgnoringCase("Demographics", actualTab, "Demographics tab is not selected");
         }
-
         public void AssertDiscoveryuiLoaded()
         {
             Assert.True(_analyticsiFrame.FindId("search", CoypuOptions.Timeout(20)).Exists(),

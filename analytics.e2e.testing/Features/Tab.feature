@@ -16,7 +16,7 @@ Scenario Outline: Display Tab
 
 Scenario: Changing Tab
 	When I click on Demographics tab
-    Then the Demographics tab should be selected
+    Then the highlighted tab is Demographics
 
 Scenario: Changing tab with query
 	When I enter qualifier ty:

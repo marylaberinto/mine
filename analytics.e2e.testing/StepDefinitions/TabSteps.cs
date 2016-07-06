@@ -20,11 +20,10 @@ namespace findly.TestAutomation.Analytics.StepDefinitions
             Websites.AnalyticsPage.ClickOnDemographicsTab();
         }
 
-        [Then(@"the Demographics tab should be selected")]
-        public void ThenTheDemographicsTabShouldBeSelected()
+        [Then(@"the highlighted tab is (.*)")]
+        public void ThenTheHighlightedTabIsDemographics (string tab)
         {
-            Websites.AnalyticsPage.AssertDemographicsTabisSelected();
+            Websites.AnalyticsPage.AssertDemographicsTabisSelected(tab);
         }
-
     }
 }
