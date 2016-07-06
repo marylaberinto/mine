@@ -10,12 +10,12 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
-
-using TechTalk.SpecFlow;
-
 #pragma warning disable
 namespace findly.TestAutomation.Analytics.Features
 {
+    using TechTalk.SpecFlow;
+    
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Tab", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
@@ -104,7 +104,7 @@ this.FeatureBackground();
 #line 18
  testRunner.When("I click on Demographics tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
-    testRunner.Then("the Demographics tab should be selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("the highlighted tab is Demographics", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -247,7 +247,7 @@ this.FeatureBackground();
 #line 18
  testRunner.When("I click on Demographics tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
-    testRunner.Then("the Demographics tab should be selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("the highlighted tab is Demographics", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

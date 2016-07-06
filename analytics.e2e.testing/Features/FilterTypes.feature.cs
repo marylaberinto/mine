@@ -10,12 +10,12 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
-
-using TechTalk.SpecFlow;
-
 #pragma warning disable
 namespace findly.TestAutomation.Analytics.Features
 {
+    using TechTalk.SpecFlow;
+    
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Filter Types", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
@@ -82,10 +82,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Display all filters, FilterTypes, Keyword, Type, Status, System, Campaign, Catego" +
-            "ry, Joined, Tag", SourceLine=14)]
-        public virtual void DisplayAllFilters_FilterTypes_KeywordTypeStatusSystemCampaignCategoryJoinedTag()
+            "ry, Joined, Tag, Question", SourceLine=14)]
+        public virtual void DisplayAllFilters_FilterTypes_KeywordTypeStatusSystemCampaignCategoryJoinedTagQuestion()
         {
-            this.DisplayAllFilters("Keyword, Type, Status, System, Campaign, Category, Joined, Tag", ((string[])(null)));
+            this.DisplayAllFilters("Keyword, Type, Status, System, Campaign, Category, Joined, Tag, Question", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
@@ -146,7 +146,7 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Display all filters")]
-        [NUnit.Framework.TestCaseAttribute("Keyword, Type, Status, System, Campaign, Category, Joined, Tag", null)]
+        [NUnit.Framework.TestCaseAttribute("Keyword, Type, Status, System, Campaign, Category, Joined, Tag, Question", null)]
         public virtual void DisplayAllFilters(string filters, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display all filters", exampleTags);
