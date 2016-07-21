@@ -10,4 +10,4 @@ Scenario Outline: Display Panels on Member Overview
 
 	Examples: Display Panels
 	| panels                                      |
-	| Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date|
+	| Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date, Member's Top Q & A|

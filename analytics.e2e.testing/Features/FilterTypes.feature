@@ -12,4 +12,4 @@ Scenario Outline: Display all filters
 
 	Examples: FilterTypes
 	| filters                                           |
-	| Keyword, Type, Status, System, Campaign, Category, Joined, Tag, Question|
+	| Keyword, Type, Status, System, Campaign, Category, Joined, Tag, Question, City, Country, State|

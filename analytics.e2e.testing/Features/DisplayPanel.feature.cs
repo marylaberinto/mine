@@ -10,12 +10,12 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
-
-using TechTalk.SpecFlow;
-
 #pragma warning disable
 namespace findly.TestAutomation.Analytics.Features
 {
+    using TechTalk.SpecFlow;
+    
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Display Panel", Description="In order to view the demographics\r\nAs a CRM user\r\nI want to be able to see all th" +
@@ -80,10 +80,11 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Display Panels on Member Overview, Display Panels, Member Category, Types, System" +
-            "s, Campaigns, Profile Statuses, Joined Date", SourceLine=12)]
-        public virtual void DisplayPanelsOnMemberOverview_DisplayPanels_MemberCategoryTypesSystemsCampaignsProfileStatusesJoinedDate()
+            "s, Campaigns, Profile Statuses, Joined Date, Member\'s Top Q & A", SourceLine=12)]
+        public virtual void DisplayPanelsOnMemberOverview_DisplayPanels_MemberCategoryTypesSystemsCampaignsProfileStatusesJoinedDateMemberSTopQA()
         {
-            this.DisplayPanelsOnMemberOverview("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date", ((string[])(null)));
+            this.DisplayPanelsOnMemberOverview("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date, Member" +
+                    "\'s Top Q & A", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
@@ -144,7 +145,8 @@ TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Display Panels on Member Overview")]
-        [NUnit.Framework.TestCaseAttribute("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date", null)]
+        [NUnit.Framework.TestCaseAttribute("Member Category, Types, Systems, Campaigns, Profile Statuses, Joined Date, Member" +
+            "\'s Top Q & A", null)]
         public virtual void DisplayPanelsOnMemberOverview(string panels, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Panels on Member Overview", exampleTags);
